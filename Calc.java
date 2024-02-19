@@ -10,7 +10,7 @@ class Calc {
     Scanner input = new Scanner(System.in);
 
     // ask users to enter operator
-    System.out.println("Choose an operator: +, -, *");
+    System.out.println("Choose an operator: +, -, * or /");
     operator = input.next().charAt(0);
 
     // ask users to enter numbers
@@ -40,8 +40,10 @@ class Calc {
         System.out.println(number1 + " * " + number2 + " = " + result);
         break;
 
-      
-      
+      case '/':
+        result = number1 / number2;
+        System.out.println(number1 + " / " + number2 + " = " + result);
+        break;
 
       default:
         System.out.println("Invalid operator!");
